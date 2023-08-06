@@ -35,9 +35,6 @@ import { SUPPORTED_MARKDOWN_FILE_EXTENSIONS } from "astro/dist/core/constants";
       <section
         id="boxers"
         class={`flex justify-between relative
-			[&>div>img]:absolute [&>div>img]:bottom-0
-			[&>div>img]:w-auto
-			[&>div>img]:animate-duration-1000 [&>div>img]:animate-ease-in-out
 			h-[40vh] lg:h-screen pt-24 border-b border-white/10
 			`}
       >
@@ -47,64 +44,64 @@ import { SUPPORTED_MARKDOWN_FILE_EXTENSIONS } from "astro/dist/core/constants";
         </div>
         <div class="relative w-full">
           <img
-            class="coscu left-0 h-[100%] z-50 animate-fade-right"
+            class="coscu absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-0 h-[100%] z-50 animate-fade-right"
             src="/boxers/coscu.webp"
             alt="Coscu"
           />
           <img
-            class="mayichi left-[5%] h-[80%] z-40 animate-fade-right animate-delay-300"
+            class="mayichi absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[5%] h-[80%] z-40 animate-fade-right animate-delay-300"
             src="/boxers/mayichi.webp"
             alt="Mayichi"
           />
           <img
-            class="viruzz left-[15%] h-[75%] z-30 animate-fade-right animate-delay-500"
+            class="viruzz absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[15%] h-[75%] z-30 animate-fade-right animate-delay-500"
             src="/boxers/viruzz.webp"
             alt="Viruzz"
           />
           <img
-            class="fernan left-[28%] h-[70%] z-20 animate-fade-right animate-delay-700"
+            class="fernan absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[28%] h-[70%] z-20 animate-fade-right animate-delay-700"
             src="/boxers/fernanfloo.webp"
             alt="Fernanfloo"
           />
           <img
-            class="larivers left-[37%] h-[68%] z-10 animate-fade-right animate-delay-1000"
+            class="larivers absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[37%] h-[68%] z-10 animate-fade-right animate-delay-1000"
             src="/boxers/la-rivers.webp"
             alt="La Rivers"
           />
           <img
-            class="papigavi left-[42%] h-[62%] z-0 animate-fade-right animate-delay-[1300ms]"
+            class="papigavi absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[42%] h-[62%] z-0 animate-fade-right animate-delay-[1300ms]"
             src="/boxers/papigavi.webp"
             alt="Papi Gavi"
           />
         </div>
         <div class="relative w-full">
           <img
-            class="german right-0 h-[100%] z-50 animate-fade-left"
+            class="german absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-0 h-[100%] z-50 animate-fade-left"
             src="/boxers/german.webp"
             alt="German"
           />
           <img
-            class="amouranth right-[5%] h-[80%] z-40 animate-fade-left animate-delay-300"
+            class="amouranth absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[5%] h-[80%] z-40 animate-fade-left animate-delay-300"
             src="/boxers/amouranth.webp"
             alt="Amouranth"
           />
           <img
-            class="shelao right-[15%] h-[76%] z-30 animate-fade-left animate-delay-500"
+            class="shelao absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[15%] h-[76%] z-30 animate-fade-left animate-delay-500"
             src="/boxers/shelao.webp"
             alt="Shelao"
           />
           <img
-            class="luzu right-[28%] h-[71%] z-20 animate-fade-left animate-delay-700"
+            class="luzu absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[28%] h-[71%] z-20 animate-fade-left animate-delay-700"
             src="/boxers/luzu.webp"
             alt="Luzu"
           />
           <img
-            class="rivers right-[37%] h-[68%] z-10 animate-fade-left animate-delay-1000"
+            class="rivers absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[37%] h-[68%] z-10 animate-fade-left animate-delay-1000"
             src="/boxers/rivers.webp"
             alt="Rivers"
           />
           <img
-            class="ampeter right-[42%] h-[64%] z-0 animate-fade-left animate-delay-[1300ms]"
+            class="ampeter absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[42%] h-[64%] z-0 animate-fade-left animate-delay-[1300ms]"
             src="/boxers/ampeter.webp"
             alt="Ampeter"
           />
