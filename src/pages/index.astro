@@ -9,18 +9,20 @@ import { SUPPORTED_MARKDOWN_FILE_EXTENSIONS } from "astro/dist/core/constants";
     <title>Boxing Event</title>
     <link rel="icon" type="image/x-icon" href="./logo.webp" />
   </head>
-  <body>
+  <body class="relative">
     <header class="relative">
       <div
-        class="absolute left-1/2 -translate-x-1/2 z-10 flex flex-col gap-1 justify-center items-center top-8"
+        class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-col gap-1 justify-center items-center mt-4 md:mt-0 md:top-8 z-10"
       >
         <img
           class="w-32 lg:w-64 h-auto animate-rotate-y animate-once animate-duration-1000 animate-ease-in animate-alternate-reverse"
-          alt="Logo de la Velada"
+          alt="Boxing Site"
           src="/logo.webp"
+          width="385"
+          height="412"
         />
         <h1
-          class="font-boxing text-5xl uppercase text-center text-white font-bold"
+          class="font-boxing text-3xl lg:text-5xl uppercase text-center text-white font-bold"
         >
           <span
             class="bg-clip-text text-transparent bg-gradient-to-b from-white via-gray-200 to-white inline-block leading-relaxed"
@@ -31,595 +33,794 @@ import { SUPPORTED_MARKDOWN_FILE_EXTENSIONS } from "astro/dist/core/constants";
       </div>
     </header>
 
-    <main>
+    <main class="relative">
       <section
         id="boxers"
         class={`flex justify-between relative
-			h-[40vh] lg:h-screen pt-24 border-b border-white/10
+			h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10 overflow-hidden
 			`}
       >
         <div
-          class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#131313] via-zinc-900 to-zinc-950"
+          class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#131824] via-zinc-900 to-zinc-950 h-full w-full inset-0 absolute"
         >
         </div>
-        <div class="relative w-full">
-          <img
-            class="coscu absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-0 h-[100%] z-50 animate-fade-right"
-            src="/boxers/coscu.webp"
-            alt="Coscu"
-          />
-          <img
-            class="mayichi absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[5%] h-[80%] z-40 animate-fade-right animate-delay-300"
-            src="/boxers/mayichi.webp"
-            alt="Mayichi"
-          />
-          <img
-            class="viruzz absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[15%] h-[75%] z-30 animate-fade-right animate-delay-500"
-            src="/boxers/viruzz.webp"
-            alt="Viruzz"
-          />
-          <img
-            class="fernan absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[28%] h-[70%] z-20 animate-fade-right animate-delay-700"
-            src="/boxers/fernanfloo.webp"
-            alt="Fernanfloo"
-          />
-          <img
-            class="larivers absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[37%] h-[68%] z-10 animate-fade-right animate-delay-1000"
-            src="/boxers/la-rivers.webp"
-            alt="La Rivers"
-          />
-          <img
-            class="papigavi absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out left-[42%] h-[62%] z-0 animate-fade-right animate-delay-[1300ms]"
-            src="/boxers/papigavi.webp"
-            alt="Papi Gavi"
-          />
-        </div>
-        <div class="relative w-full">
-          <img
-            class="german absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-0 h-[100%] z-50 animate-fade-left"
-            src="/boxers/german.webp"
-            alt="German"
-          />
-          <img
-            class="amouranth absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[5%] h-[80%] z-40 animate-fade-left animate-delay-300"
-            src="/boxers/amouranth.webp"
-            alt="Amouranth"
-          />
-          <img
-            class="shelao absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[15%] h-[76%] z-30 animate-fade-left animate-delay-500"
-            src="/boxers/shelao.webp"
-            alt="Shelao"
-          />
-          <img
-            class="luzu absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[28%] h-[71%] z-20 animate-fade-left animate-delay-700"
-            src="/boxers/luzu.webp"
-            alt="Luzu"
-          />
-          <img
-            class="rivers absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[37%] h-[68%] z-10 animate-fade-left animate-delay-1000"
-            src="/boxers/rivers.webp"
-            alt="Rivers"
-          />
-          <img
-            class="ampeter absolute bottom-0 w-auto animate-duration-1000 animate-ease-in-out right-[42%] h-[64%] z-0 animate-fade-left animate-delay-[1300ms]"
-            src="/boxers/ampeter.webp"
-            alt="Ampeter"
-          />
-        </div>
+
         <div
-          id="info"
-          class="absolute bottom-48 z-50 mx-auto left-1/2 -translate-x-1/2"
+          class="absolute inset-0 flex gap-x-3 left-1/2 -translate-x-1/2 justify-center opacity-20 blur-sm"
         >
-          <div class="flex flex-col">
-            <div class="px-5 pt-3 pb-2 bg-white text-black text-center">
-              <h2 class="font-boxing text-5xl">DECEMBER 1</h2>
-            </div>
-            <div
-              class="hover:contrast-150 hover:scale-105 transition inline-block text-4xl px-4 pt-1 pb-2 bg-black text-white text-center"
-            >
-              <a
-                class="font-boxing"
-                href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>twitch.tv/</span><span class="text-yellow-300">ibai</span>
-              </a>
-            </div>
-            <div
-              class="hover:contrast-150 hover:scale-105 transition inline-block text-4xl px-1 pt-1 pb-2 bg-sky-600 text-white text-center"
-            >
-              <a
-                class="font-boxing"
-                href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
-                target="_blank"
-                rel="noopener noreferrer">Buy Tickets</a
-              >
-            </div>
+          <div
+            class="w-2 drop-shadow-lg h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-purple-300 to-purple-500"
+          >
+          </div>
+          <div
+            class="w-2 drop-shadow-lg h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-purple-300 to-purple-500"
+          >
+          </div>
+          <div
+            class="w-2 drop-shadow-lg h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-purple-300 to-purple-500"
+          >
           </div>
         </div>
+
+        <div class="relative w-full">
+          <img
+            class="coscu left-0 h-full z-50 absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/coscu-mobile.webp 767w, /boxers/coscu.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="COSCU"
+            fetchpriority="high"
+          />
+          <img
+            class="mayichi left-[5%] h-[80%] z-40 animate-fade-right absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/mayichi-mobile.webp 767w, /boxers/mayichi.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="MAYICHI"
+          />
+          <img
+            class="viruzz left-[15%] h-[75%] z-30 animate-delay-300 animate-fade-right absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/viruzz-mobile.webp 767w, /boxers/viruzz.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="VIRUZZ"
+          />
+          <img
+            class="fernan left-[30%] h-[70%] z-20 animate-delay-500 animate-fade-right absolute bottom-0 w-auto animate-ease-in-out animate-duration-700;"
+            srcset="/boxers/fernanfloo-mobile.webp 767w, /boxers/fernanfloo.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="FERNANFLOO"
+          />
+          <img
+            class="larivers left-[45%] h-[68%] z-10 animate-delay-700 animate-fade-right absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/la-rivers-mobile.webp 767w, /boxers/la-rivers.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="LA RIVERS"
+          />
+          <img
+            class="papigavi left-[50%] h-[63%] z-0 animate-delay-1000 animate-fade-right absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/papigavi-mobile.webp 767w, /boxers/papigavi.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            fetchpriority="low"
+            alt="PAPI GAVI"
+          />
+        </div>
+        <div class="relative w-full">
+          <img
+            class="german right-0 h-full z-50 absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/german-mobile.webp 767w, /boxers/german.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            fetchpriority="high"
+            alt="GERMAN"
+          />
+          <img
+            class="amouranth right-[5%] h-[80%] z-40 animate-fade-left absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/amouranth-mobile.webp 767w, /boxers/amouranth.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="AMOURANTH"
+          />
+          <img
+            class="shelao right-[15%] h-[75%] z-30 animate-fade-left animate-delay-300 absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/shelao-mobile.webp 767w, /boxers/shelao.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="SHELAO"
+          />
+          <img
+            class="luzu right-[30%] h-[70%] z-20 animate-fade-left animate-delay-500 absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/luzu-mobile.webp 767w, /boxers/luzu.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="LUZU"
+          />
+          <img
+            class="rivers right-[42%] h-[66%] z-10 animate-fade-left animate-delay-700 absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            srcset="/boxers/rivers-mobile.webp 767w, /boxers/rivers.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            alt="RIVERS"
+          />
+          <img
+            class="ampeter right-[50%] h-[63%] z-0 animate-fade-left animate-delay-1000 absolute bottom-0 w-auto animate-ease-in-out animate-duration-700"
+            src="/boxers/ampeter-mobile.webp"
+            srcset="/boxers/ampeter-mobile.webp 767w, /boxers/ampeter.webp"
+            sizes="(max-width: 767px) 767px, 100vw"
+            fetchpriority="low"
+            alt="AMPETER"
+          />
+        </div>
       </section>
+
+      <div
+        id="info"
+        class="block lg:absolute lg:bottom-48 z-50 mx-auto lg:left-1/2 lg:-translate-x-1/2"
+      >
+        <div class="flex flex-col">
+          <div class="px-5 pt-3 pb-2 bg-white text-black text-center">
+            <h2 class="font-boxing text-5xl">DECEMBER 1</h2>
+          </div>
+          <div
+            class="hover:contrast-150 hover:scale-105 transition inline-block text-4xl px-4 pt-1 pb-2 bg-black text-white text-center"
+          >
+            <a
+              class="font-boxing"
+              href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>twitch.tv/</span><span class="text-yellow-300">ibai</span>
+            </a>
+          </div>
+          <div
+            class="hover:contrast-150 hover:scale-105 transition inline-block text-4xl px-1 pt-1 pb-2 bg-sky-600 text-white text-center"
+          >
+            <a
+              class="font-boxing"
+              href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
+              target="_blank"
+              rel="noopener noreferrer">Buy Tickets</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        id="combat"
+        class="absolute bottom-48 z-50 mx-auto left-1/2 -translate-x-1/2 flex justify-center flex-col gap-y-24 opacity-0"
+      >
+        <div class="px-5 pt-4 pb-2 bg-black text-white text-center">
+          <h3 class="font-boxing text-7xl"></h3>
+        </div>
+        <span
+          class="left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-boxing text-yellow-500 text-7xl block absolute [text-shadow:2px_2px_0px_red,4px_4px_0px_orange,6px_6px_0px_black]"
+        >
+          VS
+        </span>
+
+        <div class="px-5 pt-5 pb-2 bg-white text-black text-center">
+          <h3 class="font-boxing text-7xl"></h3>
+        </div>
+      </div>
     </main>
+
+    <section
+      class="grid grid-cols-2 max-w-6xl gap-4 m-auto px-6 pt-20 pb-10 w-full"
+    >
+      <a
+        class="col-span-2 lg:col-span-1 w-full rounded hover:scale-[102%] hover:contrast-[110%] block transition"
+        href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        <img
+          class="aspect-[26/9] object-cover w-full rounded border border-white/10"
+          alt="Ad Example"
+          src="/adExample1.jpg"
+        />
+      </a>
+
+      <a
+        class="col-span-2 lg:col-span-1 w-full rounded hover:scale-[102%] hover:contrast-[110%] block transition"
+        href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        <img
+          class="aspect-[26/9] object-cover object-left w-full rounded border border-white/10"
+          alt="Discount ad example"
+          src="/adExample.jpg"
+        />
+      </a>
+    </section>
+
+    <section class="max-w-6xl gap-4 m-auto px-6 pt-10 pb-20 w-full">
+      <h2
+        class="font-boxing text-white pb-4 uppercase text-center text-4xl font-extralight"
+      >
+        How to get to the event
+      </h2>
+      <a
+        href="https://www.google.com/maps/place/Estadio+C%C3%ADvitas+Metropolitano/@40.4351624,-3.604488,16.61z/data=!4m6!3m5!1s0xd422fea8401b789:0x245d0d64dad50ec4!8m2!3d40.4361939!4d-3.5994674!16s%2Fm%2F05515km"
+        target="_blank"
+        class="hover:scale-[102%] hover:contrast-[110%] block transition w-full"
+      >
+        <img
+          alt="Map"
+          class="rounded shadow-lg shadow-gray-100 w-full h-auto border border-black/10 invert"
+          src="/map.png"
+          loading="lazy"
+        />
+      </a>
+    </section>
+
+    <footer class="w-full m-auto relative">
+      <div
+        class="footer__bg absolute inset-0 bg-[url('/footer_fondo_velada.webp')] bg-no-repeat bg-bottom bg-scroll bg-cover -z-10"
+      >
+      </div>
+      <div
+        class="mx-auto max-w-6xl w-full overflow-hidden px-6 pt-10 pb-10 sm:py-24 lg:px-8"
+      >
+        <div
+          class="mt-10 flex flex-col md:flex-row gap-y-8 justify-between items-center"
+        >
+          <nav class="flex gap-x-4 flex-grow basis-0 justify-start">
+            <a
+              href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="w-8 h-8 text-white hover:text-yellow-300 transition"
+                xmlns="http://www.w3.org/2000/svg"
+                width="800"
+                height="800"
+                viewBox="0 0 20 20"
+                ><path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M5.869652.12273C4.241769.19618 2.830805.5942 1.691486 1.72871.548187 2.86918.155147 4.28558.081514 5.89653c-.045772 1.00548-.313437 8.60165.462693 10.59375.52339 1.34394 1.55425 2.37721 2.910487 2.90228.632844.24616 1.355242.41291 2.414958.46155 8.860815.401 12.145437.18263 13.53053-3.36383.245774-.63128.414931-1.35288.461698-2.40997.40498-8.88354-.065673-10.80914-1.609972-12.3516C17.027016.50685 15.5862-.32492 5.869652.12273m.081593 17.94475c-.970162-.04368-1.496538-.20547-1.847786-.34145-.883594-.34343-1.547285-1.00448-1.888583-1.88291-.591053-1.51368-.39503-8.70289-.342293-9.86619.051742-1.13948.282591-2.18069 1.086582-2.98467.995038-.99258 2.280627-1.47894 11.033979-1.08389 1.142304.05161 2.186099.28189 2.99208 1.08389.995038.99257 1.488577 2.28788 1.086582 11.00765-.043782.96776-.205973 1.49283-.342293 1.84321-.90051 2.30773-2.97218 2.62833-11.778268 2.22436m8.138418-13.37792c0 .65709.534335 1.19109 1.194046 1.19109.65971 0 1.195041-.534 1.195041-1.19109 0-.65708-.535331-1.19109-1.195041-1.19109-.659711 0-1.194046.53401-1.194046 1.19109m-9.22699 5.29836c0 2.81494 2.287593 5.09687 5.109521 5.09687 2.821929 0 5.109522-2.28193 5.109522-5.09687s-2.287593-5.09587-5.109522-5.09587c-2.821928 0-5.109521 2.28093-5.109521 5.09587m1.793059 0c0-1.82633 1.484597-3.30825 3.316462-3.30825 1.831866 0 3.316463 1.48192 3.316463 3.30825 0 1.82733-1.484597 3.30924-3.316463 3.30924-1.831865 0-3.316462-1.48191-3.316462-3.30924"
+                ></path></svg
+              >
+            </a>
+            <a
+              href="https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="w-8 h-8 text-white hover:text-yellow-300 transition"
+                xmlns="http://www.w3.org/2000/svg"
+                width="800"
+                height="800"
+                viewBox="0 -2 20 20"
+                ><path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M6.29 16c7.547 0 11.675-6.15635 11.675-11.49454 0-.17525 0-.34951-.012-.52279.803-.57104 1.496-1.27991 2.047-2.09117-.748.32687-1.543.5415-2.356.63601.856-.50507 1.497-1.29861 1.804-2.23491-.806.47061-1.687.8024-2.606.98061-1.554-1.62647-4.153-1.70523-5.806-.17525-1.065.98651-1.518 2.45742-1.187 3.86039C6.55 4.79492 3.476 3.261 1.392.73762.303 2.58363.86 4.94457 2.663 6.12996 2.01 6.11125 1.371 5.93797.8 5.62489v.05119C.801 7.5989 2.178 9.2549 4.092 9.63591c-.604.16245-1.238.18608-1.852.06892.537 1.64616 2.078 2.77346 3.833 2.80595-1.453 1.12435-3.248 1.73476-5.096 1.7328-.326-.00099-.652-.0197-.977-.05809C1.877 15.37088 4.06 16 6.29 15.99705"
+                ></path></svg
+              >
+            </a>
+          </nav>
+
+          <img src="/logo.webp" alt="Boxing Event" class="w-36 h-40" />
+
+          <div class="flex justify-end flex-grow basis-0">
+            <img src="/partners.png" alt="Partners" class="w-64 h-auto" />
+          </div>
+        </div>
+        <p class="mt-10 text-center text-xs leading-5 text-white">
+          &copy; 2023 Boxing Event | All Rights Reserved
+        </p>
+      </div>
+    </footer>
   </body>
-</html>
 
-<style is:global>
-  body {
-    background: #131313;
-  }
+  <style is:global>
+    body {
+      background: #131313;
+    }
 
-  @font-face {
-    font-family: "Boxing";
-    src: url("/fonts/boxing.ttf");
-    font-weight: bold;
-  }
+    .footer__bg {
+      -webkit-mask-image: linear-gradient(to top, #131313 60%, transparent 98%);
+      -webkit-mask-repeat: no-repeat;
+      mask-image: linear-gradient(to top, #131313 60%, transparent 98%);
+      mask-repeat: no-repeat;
+    }
 
-  @font-face {
-    font-family: "Boxing Stripped";
-    src: url("/fonts/boxing-stripped.ttf");
-    font-weight: bold;
-  }
+    @font-face {
+      font-family: "Boxing";
+      src: url("/fonts/boxing.woff2");
+      font-weight: bold;
+    }
 
-  .coscu {
-    clip-path: polygon(
-      92% 8%,
-      100% 12%,
-      91% 16%,
-      94% 19%,
-      91% 25%,
-      99% 31%,
-      79% 35%,
-      75% 40%,
-      61% 42%,
-      37% 41%,
-      26% 42%,
-      19% 45%,
-      42% 48%,
-      61% 57%,
-      73% 66%,
-      82% 77%,
-      90% 90%,
-      97% 100%,
-      41% 100%,
-      10% 100%,
-      0 100%,
-      0% 90%,
-      0% 80%,
-      0% 67%,
-      0% 55%,
-      0% 45%,
-      0 32%,
-      0 24%,
-      0 18%,
-      0 11%,
-      0 3%,
-      29% 2%,
-      52% 3%
-    );
-  }
+    @font-face {
+      font-family: "Boxing Striped";
+      src: url("/fonts/boxing-striped.woff2");
+      font-weight: bold;
+    }
 
-  .mayichi {
-    clip-path: polygon(
-      76% 6%,
-      78% 10%,
-      74% 14%,
-      78% 17%,
-      73% 19%,
-      69% 23%,
-      61% 31%,
-      74% 35%,
-      82% 36%,
-      89% 42%,
-      89% 48%,
-      85% 55%,
-      83% 61%,
-      85% 69%,
-      85% 73%,
-      97% 81%,
-      100% 90%,
-      100% 100%,
-      41% 100%,
-      32% 100%,
-      34% 89%,
-      24% 83%,
-      18% 74%,
-      11% 70%,
-      7% 65%,
-      11% 59%,
-      13% 35%,
-      15% 22%,
-      20% 12%,
-      27% 4%,
-      38% 1%,
-      53% 0,
-      67% 2%
-    );
-  }
+    .coscu {
+      clip-path: polygon(
+        92% 8%,
+        100% 12%,
+        91% 16%,
+        94% 19%,
+        91% 25%,
+        99% 31%,
+        79% 35%,
+        75% 40%,
+        61% 42%,
+        37% 41%,
+        26% 42%,
+        19% 45%,
+        42% 48%,
+        61% 57%,
+        73% 66%,
+        82% 77%,
+        90% 90%,
+        97% 100%,
+        41% 100%,
+        10% 100%,
+        0 100%,
+        0% 90%,
+        0% 80%,
+        0% 67%,
+        0% 55%,
+        0% 45%,
+        0 32%,
+        0 24%,
+        0 18%,
+        0 11%,
+        0 3%,
+        29% 2%,
+        52% 3%
+      );
+    }
 
-  .viruzz {
-    clip-path: polygon(
-      87% 2%,
-      87% 6%,
-      87% 14%,
-      84% 17%,
-      85% 23%,
-      71% 24%,
-      67% 29%,
-      77% 35%,
-      84% 41%,
-      87% 46%,
-      90% 55%,
-      93% 68%,
-      95% 88%,
-      100% 91%,
-      100% 99%,
-      88% 99%,
-      78% 97%,
-      76% 100%,
-      41% 100%,
-      0 100%,
-      0 95%,
-      7% 88%,
-      6% 74%,
-      11% 66%,
-      11% 57%,
-      11% 39%,
-      12% 36%,
-      24% 28%,
-      37% 24%,
-      38% 22%,
-      20% 11%,
-      30% 3%,
-      37% 0
-    );
-  }
+    .mayichi {
+      clip-path: polygon(
+        76% 6%,
+        78% 10%,
+        74% 14%,
+        78% 17%,
+        73% 19%,
+        69% 23%,
+        61% 31%,
+        74% 35%,
+        82% 36%,
+        89% 42%,
+        89% 48%,
+        85% 55%,
+        83% 61%,
+        85% 69%,
+        85% 73%,
+        97% 81%,
+        100% 90%,
+        100% 100%,
+        41% 100%,
+        32% 100%,
+        34% 89%,
+        24% 83%,
+        18% 74%,
+        11% 70%,
+        7% 65%,
+        11% 59%,
+        13% 35%,
+        15% 22%,
+        20% 12%,
+        27% 4%,
+        38% 1%,
+        53% 0,
+        67% 2%
+      );
+    }
 
-  .fernan {
-    clip-path: polygon(
-      61% 0,
-      63% 4%,
-      60% 5%,
-      67% 8%,
-      66% 10%,
-      71% 14%,
-      68% 18%,
-      69% 23%,
-      58% 23%,
-      56% 28%,
-      68% 31%,
-      74% 34%,
-      75% 42%,
-      75% 65%,
-      75% 71%,
-      84% 86%,
-      100% 94%,
-      100% 100%,
-      41% 100%,
-      0 100%,
-      0 95%,
-      0 78%,
-      0 57%,
-      0 43%,
-      7% 33%,
-      20% 28%,
-      31% 23%,
-      23% 21%,
-      16% 14%,
-      16% 9%,
-      21% 5%,
-      33% 2%,
-      45% 0
-    );
-  }
+    .viruzz {
+      clip-path: polygon(
+        87% 2%,
+        87% 6%,
+        87% 14%,
+        84% 17%,
+        85% 23%,
+        71% 24%,
+        67% 29%,
+        77% 35%,
+        84% 41%,
+        87% 46%,
+        90% 55%,
+        93% 68%,
+        95% 88%,
+        100% 91%,
+        100% 99%,
+        88% 99%,
+        78% 97%,
+        76% 100%,
+        41% 100%,
+        0 100%,
+        0 95%,
+        7% 88%,
+        6% 74%,
+        11% 66%,
+        11% 57%,
+        11% 39%,
+        12% 36%,
+        24% 28%,
+        37% 24%,
+        38% 22%,
+        20% 11%,
+        30% 3%,
+        37% 0
+      );
+    }
 
-  .larivers {
-    clip-path: polygon(
-      30% 0,
-      42% 1%,
-      48% 3%,
-      65% 4%,
-      78% 8%,
-      83% 12%,
-      81% 15%,
-      89% 19%,
-      84% 20%,
-      83% 25%,
-      78% 27%,
-      64% 28%,
-      62% 31%,
-      71% 36%,
-      94% 44%,
-      95% 50%,
-      91% 57%,
-      100% 100%,
-      41% 100%,
-      27% 100%,
-      33% 97%,
-      12% 84%,
-      20% 75%,
-      34% 68%,
-      37% 63%,
-      21% 49%,
-      5% 45%,
-      6% 38%,
-      0 28%,
-      5% 23%,
-      5% 12%,
-      10% 8%,
-      22% 4%
-    );
-  }
+    .fernan {
+      clip-path: polygon(
+        61% 0,
+        63% 4%,
+        60% 5%,
+        67% 8%,
+        66% 10%,
+        71% 14%,
+        68% 18%,
+        69% 23%,
+        58% 23%,
+        56% 28%,
+        68% 31%,
+        74% 34%,
+        75% 42%,
+        75% 65%,
+        75% 71%,
+        84% 86%,
+        100% 94%,
+        100% 100%,
+        41% 100%,
+        0 100%,
+        0 95%,
+        0 78%,
+        0 57%,
+        0 43%,
+        7% 33%,
+        20% 28%,
+        31% 23%,
+        23% 21%,
+        16% 14%,
+        16% 9%,
+        21% 5%,
+        33% 2%,
+        45% 0
+      );
+    }
 
-  .papigavi {
-    clip-path: polygon(
-      76% 100%,
-      77% 82%,
-      88% 80%,
-      85% 71%,
-      100% 71%,
-      100% 65%,
-      89% 60%,
-      82% 55%,
-      69% 24%,
-      72% 20%,
-      77% 19%,
-      75% 15%,
-      77% 12%,
-      79% 7%,
-      76% 5%,
-      66% 2%,
-      44% 0,
-      36% 4%,
-      34% 16%,
-      26% 20%,
-      2% 31%,
-      0 40%,
-      0 57%,
-      15% 75%,
-      14% 77%,
-      18% 84%,
-      25% 86%,
-      28% 100%
-    );
-  }
+    .larivers {
+      clip-path: polygon(
+        30% 0,
+        42% 1%,
+        48% 3%,
+        65% 4%,
+        78% 8%,
+        83% 12%,
+        81% 15%,
+        89% 19%,
+        84% 20%,
+        83% 25%,
+        78% 27%,
+        64% 28%,
+        62% 31%,
+        71% 36%,
+        94% 44%,
+        95% 50%,
+        91% 57%,
+        100% 100%,
+        41% 100%,
+        27% 100%,
+        33% 97%,
+        12% 84%,
+        20% 75%,
+        34% 68%,
+        37% 63%,
+        21% 49%,
+        5% 45%,
+        6% 38%,
+        0 28%,
+        5% 23%,
+        5% 12%,
+        10% 8%,
+        22% 4%
+      );
+    }
 
-  .german {
-    clip-path: polygon(
-      9% 82%,
-      13% 85%,
-      1% 100%,
-      100% 100%,
-      100% 71%,
-      100% 65%,
-      100% 58%,
-      100% 50%,
-      100% 28%,
-      100% 21%,
-      100% 17%,
-      100% 2%,
-      91% 2%,
-      74% 0,
-      37% 1%,
-      21% 6%,
-      2% 12%,
-      0 16%,
-      10% 18%,
-      14% 23%,
-      19% 24%,
-      8% 29%,
-      19% 32%,
-      26% 37%,
-      39% 42%,
-      68% 40%,
-      72% 43%,
-      13% 55%
-    );
-  }
+    .papigavi {
+      clip-path: polygon(
+        76% 100%,
+        77% 82%,
+        88% 80%,
+        85% 71%,
+        100% 71%,
+        100% 65%,
+        89% 60%,
+        82% 55%,
+        69% 24%,
+        72% 20%,
+        77% 19%,
+        75% 15%,
+        77% 12%,
+        79% 7%,
+        76% 5%,
+        66% 2%,
+        44% 0,
+        36% 4%,
+        34% 16%,
+        26% 20%,
+        2% 31%,
+        0 40%,
+        0 57%,
+        15% 75%,
+        14% 77%,
+        18% 84%,
+        25% 86%,
+        28% 100%
+      );
+    }
 
-  .amouranth {
-    clip-path: polygon(
-      3% 93%,
-      0 96%,
-      0 100%,
-      100% 100%,
-      96% 70%,
-      89% 50%,
-      100% 41%,
-      100% 26%,
-      93% 20%,
-      89% 14%,
-      87% 10%,
-      81% 4%,
-      72% 0,
-      50% 1%,
-      36% 3%,
-      36% 15%,
-      39% 20%,
-      44% 21%,
-      43% 24%,
-      50% 25%,
-      47% 30%,
-      31% 34%,
-      23% 40%,
-      26% 46%,
-      33% 51%,
-      34% 59%,
-      33% 66%,
-      4% 86%
-    );
-  }
+    .german {
+      clip-path: polygon(
+        9% 82%,
+        13% 85%,
+        1% 100%,
+        100% 100%,
+        100% 71%,
+        100% 65%,
+        100% 58%,
+        100% 50%,
+        100% 28%,
+        100% 21%,
+        100% 17%,
+        100% 2%,
+        91% 2%,
+        74% 0,
+        37% 1%,
+        21% 6%,
+        2% 12%,
+        0 16%,
+        10% 18%,
+        14% 23%,
+        19% 24%,
+        8% 29%,
+        19% 32%,
+        26% 37%,
+        39% 42%,
+        68% 40%,
+        72% 43%,
+        13% 55%
+      );
+    }
 
-  .luzu {
-    clip-path: polygon(
-      6% 93%,
-      5% 100%,
-      18% 100%,
-      87% 100%,
-      100% 73%,
-      100% 36%,
-      90% 29%,
-      70% 23%,
-      85% 16%,
-      88% 8%,
-      83% 5%,
-      59% 0,
-      36% 2%,
-      28% 4%,
-      25% 9%,
-      24% 11%,
-      20% 14%,
-      23% 15%,
-      23% 21%,
-      34% 23%,
-      38% 28%,
-      21% 33%,
-      21% 40%,
-      16% 51%,
-      14% 62%,
-      9% 74%,
-      5% 81%,
-      0 93%
-    );
-  }
+    .amouranth {
+      clip-path: polygon(
+        3% 93%,
+        0 96%,
+        0 100%,
+        100% 100%,
+        96% 70%,
+        89% 50%,
+        100% 41%,
+        100% 26%,
+        93% 20%,
+        89% 14%,
+        87% 10%,
+        81% 4%,
+        72% 0,
+        50% 1%,
+        36% 3%,
+        36% 15%,
+        39% 20%,
+        44% 21%,
+        43% 24%,
+        50% 25%,
+        47% 30%,
+        31% 34%,
+        23% 40%,
+        26% 46%,
+        33% 51%,
+        34% 59%,
+        33% 66%,
+        4% 86%
+      );
+    }
 
-  .shelao {
-    clip-path: polygon(
-      14% 89%,
-      17% 94%,
-      13% 100%,
-      85% 100%,
-      100% 48%,
-      97% 34%,
-      66% 23%,
-      64% 17%,
-      68% 13%,
-      69% 10%,
-      60% 4%,
-      50% 3%,
-      35% 4%,
-      26% 6%,
-      23% 13%,
-      18% 16%,
-      18% 19%,
-      24% 24%,
-      34% 24%,
-      42% 27%,
-      35% 29%,
-      25% 31%,
-      21% 34%,
-      19% 44%,
-      18% 54%,
-      13% 67%,
-      0 80%,
-      0 85%
-    );
-  }
+    .luzu {
+      clip-path: polygon(
+        6% 93%,
+        5% 100%,
+        18% 100%,
+        87% 100%,
+        100% 73%,
+        100% 36%,
+        90% 29%,
+        70% 23%,
+        85% 16%,
+        88% 8%,
+        83% 5%,
+        59% 0,
+        36% 2%,
+        28% 4%,
+        25% 9%,
+        24% 11%,
+        20% 14%,
+        23% 15%,
+        23% 21%,
+        34% 23%,
+        38% 28%,
+        21% 33%,
+        21% 40%,
+        16% 51%,
+        14% 62%,
+        9% 74%,
+        5% 81%,
+        0 93%
+      );
+    }
 
-  .rivers {
-    clip-path: polygon(
-      18% 77%,
-      27% 69%,
-      24% 100%,
-      91% 100%,
-      82% 92%,
-      100% 79%,
-      100% 32%,
-      84% 25%,
-      76% 6%,
-      68% 2%,
-      54% 0,
-      35% 2%,
-      20% 6%,
-      17% 13%,
-      19% 31%,
-      18% 37%,
-      12% 43%,
-      13% 51%,
-      20% 54%,
-      14% 60%,
-      6% 70%,
-      0 72%,
-      4% 73%,
-      0 77%,
-      0 83%,
-      14% 88%,
-      25% 85%,
-      18% 80%
-    );
-  }
+    .shelao {
+      clip-path: polygon(
+        14% 89%,
+        17% 94%,
+        13% 100%,
+        85% 100%,
+        100% 48%,
+        97% 34%,
+        66% 23%,
+        64% 17%,
+        68% 13%,
+        69% 10%,
+        60% 4%,
+        50% 3%,
+        35% 4%,
+        26% 6%,
+        23% 13%,
+        18% 16%,
+        18% 19%,
+        24% 24%,
+        34% 24%,
+        42% 27%,
+        35% 29%,
+        25% 31%,
+        21% 34%,
+        19% 44%,
+        18% 54%,
+        13% 67%,
+        0 80%,
+        0 85%
+      );
+    }
 
-  .ampeter {
-    clip-path: polygon(
-      91% 100%,
-      89% 81%,
-      100% 64%,
-      100% 39%,
-      62% 19%,
-      69% 14%,
-      71% 5%,
-      61% 0,
-      43% 0,
-      25% 2%,
-      29% 5%,
-      23% 13%,
-      26% 18%,
-      28% 21%,
-      36% 22%,
-      38% 25%,
-      41% 28%,
-      29% 31%,
-      24% 40%,
-      23% 48%,
-      25% 53%,
-      19% 57%,
-      15% 64%,
-      9% 69%,
-      0 79%,
-      0 86%,
-      16% 90%,
-      19% 100%
-    );
-  }
-</style>
+    .rivers {
+      clip-path: polygon(
+        18% 77%,
+        27% 69%,
+        24% 100%,
+        91% 100%,
+        82% 92%,
+        100% 79%,
+        100% 32%,
+        84% 25%,
+        76% 6%,
+        68% 2%,
+        54% 0,
+        35% 2%,
+        20% 6%,
+        17% 13%,
+        19% 31%,
+        18% 37%,
+        12% 43%,
+        13% 51%,
+        20% 54%,
+        14% 60%,
+        6% 70%,
+        0 72%,
+        4% 73%,
+        0 77%,
+        0 83%,
+        14% 88%,
+        25% 85%,
+        18% 80%
+      );
+    }
 
-<script>
-  const $boxers = document.querySelector("#boxers");
-  const $boxersImages = $boxers.querySelectorAll("img");
+    .ampeter {
+      clip-path: polygon(
+        91% 100%,
+        89% 81%,
+        100% 64%,
+        100% 39%,
+        62% 19%,
+        69% 14%,
+        71% 5%,
+        61% 0,
+        43% 0,
+        25% 2%,
+        29% 5%,
+        23% 13%,
+        26% 18%,
+        28% 21%,
+        36% 22%,
+        38% 25%,
+        41% 28%,
+        29% 31%,
+        24% 40%,
+        23% 48%,
+        25% 53%,
+        19% 57%,
+        15% 64%,
+        9% 69%,
+        0 79%,
+        0 86%,
+        16% 90%,
+        19% 100%
+      );
+    }
+  </style>
 
-  $boxersImages.forEach(($img) => {
-    $img.addEventListener("mouseleave", () => {
-      $boxersImages.forEach(($img) => {
-        $img.setAttribute("style", "transition: all .3s ease-in-out");
-      });
-    });
-  });
-  $boxersImages.forEach(($img) => {
-    $img.addEventListener("mouseenter", () => {
-      const sectionImages = $img.parentNode.children;
-      const position = Array.from(sectionImages).indexOf($img);
-      //get image for the left and right side
-      const [leftBoxer, rightBoxer] = [
-        $boxersImages[position], //left boxer
-        $boxersImages[position + $boxersImages.length / 2], // right boxer
-      ];
+  <script>
+    const $boxers = document.querySelector("#boxers");
+    const $boxersImages = $boxers.querySelectorAll("img");
 
-      //hide not selected boxers
-      $boxersImages.forEach(($img) => {
-        $img.setAttribute(
+    const $info = document.querySelector("#info");
+    const $combat = document.querySelector("#combat");
+
+    $boxersImages.forEach(($img) => {
+      $img.addEventListener("mouseleave", () => {
+        $boxersImages.forEach(($img) => {
+          $img.setAttribute("style", "transition: all .3s ease-in-out");
+        });
+
+        $info.setAttribute(
           "style",
-          "filter: blur(2px) grayscale(.8); transition:all 1s ease-in-out"
+          "opacity:1; transition: all .3s ease-in-out"
+        );
+        $combat.setAttribute(
+          "style",
+          "opacity:0; transition: all .3s ease-in-out; visibility:hidden"
         );
       });
-
-      leftBoxer.setAttribute(
-        "style",
-        "scale: 1.05; contrast:1.1; transition: all .3s ease-in-out"
-      );
-
-      rightBoxer.setAttribute(
-        "style",
-        "scale: 1.05; contrast:1.1; transition: all .3s ease-in-out"
-      );
     });
-  });
-</script>
+    $boxersImages.forEach(($img) => {
+      $img.addEventListener("mouseenter", () => {
+        const sectionImages = $img.parentNode.children;
+        const position = Array.from(sectionImages).indexOf($img);
+        //get image for the left and right side
+        const [leftBoxer, rightBoxer] = [
+          $boxersImages[position], //left boxer
+          $boxersImages[position + $boxersImages.length / 2], // right boxer
+        ];
+
+        //hide information
+        $info.setAttribute(
+          "style",
+          "opacity:0; transition: all .3s ease-in-out"
+        );
+        $combat.setAttribute(
+          "style",
+          "opacity:1; transition: all .3s ease-in-out"
+        );
+
+        const [firstBoxerName, secondBoxerName] =
+          $combat.querySelectorAll("h3");
+        firstBoxerName.innerText = leftBoxer.alt;
+        secondBoxerName.innerText = rightBoxer.alt;
+
+        //hide not selected boxers
+        $boxersImages.forEach(($img) => {
+          $img.setAttribute(
+            "style",
+            "filter: blur(2px) grayscale(.8); transition:all 1s ease-in-out"
+          );
+        });
+
+        leftBoxer.setAttribute(
+          "style",
+          "scale: 1.05; contrast:1.1; transition: all .3s ease-in-out"
+        );
+
+        rightBoxer.setAttribute(
+          "style",
+          "scale: 1.05; contrast:1.1; transition: all .3s ease-in-out"
+        );
+      });
+    });
+  </script>
+</html>
