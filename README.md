@@ -36,9 +36,9 @@ You can experience the Boxing Event website live by visiting [https://boxingeven
 
 ## Screenshots
 
-![Screenshot 1](/path/to/screenshot1.png)
-![Screenshot 2](/path/to/screenshot2.png)
-![Screenshot 3](/path/to/screenshot3.png)
+![Screenshot 1](public/bScreenshot.png)
+![Screenshot 2](public/hScreenshot.png)
+![Screenshot 3](public/tScreenshot.png)
 
 ## Contact
 
