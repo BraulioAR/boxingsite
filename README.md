@@ -25,7 +25,7 @@ The Boxing Event website is built using modern web technologies to create an eng
 
 ## Getting Started
 
-1. Clone this repository: `git clone https://github.com/yourusername/boxing-event-site.git`
+1. Clone this repository: `git clone https://github.com/BraulioAR/boxingsite.git`
 2. Navigate to the project folder: `cd boxingsite`
 3. Install dependencies: `npm install`
 4. Run the development server: `npm run dev`
