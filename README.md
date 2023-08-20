@@ -45,6 +45,6 @@ You can experience the Boxing Event website live by visiting [https://boxingeven
 If you have any questions, feedback, or inquiries about the Boxing Event website, feel free to reach out to me:
 
 - Email: [bdressx@gmail.com](mailto:bdressx@gmail.com)
-- LinkedIn: [Braulio Rosario](https://www.linkedin.com/in/braulio-rosario-rodriguez-815101218/)
+- LinkedIn: [Braulio Rosario](https://www.linkedin.com/in/braulio-rosario-815101218/)
 
 Thank you for your interest in the Boxing Event website. I hope you enjoy exploring the project!
